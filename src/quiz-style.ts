@@ -4,6 +4,7 @@ export const Title = styled.h1`
   display: flex;
   justify-content: center;
   text-align: center;
+  color: white;
 `;
 
 export const Box = styled.div`
@@ -16,6 +17,7 @@ export const Box = styled.div`
 export const Text = styled.p`
   display: flex;
   justify-content: center;
+  color: white;
 `;
 
 export const StartButton = styled.button`
