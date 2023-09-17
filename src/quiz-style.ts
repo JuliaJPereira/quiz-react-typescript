@@ -21,9 +21,10 @@ export const Text = styled.p`
 `;
 
 export const StartButton = styled.button`
-  background-color: purple;
+  background-color: #C767AC;
   color: white;
   margin: 0 auto;
+  box-shadow: #0000008f 5px 5px 10px;
 `;
 
 export const Image = styled.img`
