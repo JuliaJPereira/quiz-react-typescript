@@ -1,4 +1,4 @@
-import { Box, Title, Text, StartButton } from "./quiz-style.ts";
+import { Box, Title, Text, StartButton, Image } from "./quiz-style.ts";
 
 function Quiz() {
   return (
@@ -8,10 +8,9 @@ function Quiz() {
         <Text id="text">Clique no botão abaixo para começar!</Text>
         <StartButton id="iniciar">Iniciar</StartButton>
       </Box>
-      <img
+      <Image
         src="src/assets/computer.png"
-        alt="Imagem do computador"
-        width={"500px"}
+        alt="Imagem computador"
       />
     </>
   );

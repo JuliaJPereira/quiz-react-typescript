@@ -23,3 +23,7 @@ export const StartButton = styled.button`
   color: white;
   margin: 0 auto;
 `;
+
+export const Image = styled.img`
+  width: 500px;
+`;
