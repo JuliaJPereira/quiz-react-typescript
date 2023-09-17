@@ -1,8 +1,8 @@
-import { Box, Title, Text, StartButton, Image, BackgroundImage } from "./quiz-style.ts";
+import { Container, Box, Title, Text, StartButton, Image, BackgroundImage } from "./quiz-style.ts";
 
 function Quiz() {
   return (
-    <>
+    <Container>
       <BackgroundImage src="src/assets/background.png" alt="fundo" />
       <Title id="title">Quiz de Programação</Title>
       <Box id="texto-e-botao">
@@ -13,7 +13,7 @@ function Quiz() {
         src="src/assets/computer.png"
         alt="Imagem computador"
       />
-    </>
+    </Container>
   );
 }
 

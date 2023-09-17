@@ -1,5 +1,11 @@
 import styled from "styled-components";
 
+export const Container = styled.div`
+  @media only screen and (max-width: 500px) {
+    margin-top: 80px;
+  }
+`;
+
 export const Title = styled.h1`
   display: flex;
   justify-content: center;
