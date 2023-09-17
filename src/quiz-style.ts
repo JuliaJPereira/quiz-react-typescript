@@ -27,3 +27,12 @@ export const StartButton = styled.button`
 export const Image = styled.img`
   width: 500px;
 `;
+
+export const BackgroundImage = styled.img`
+  position: fixed; /* Fixa a imagem de fundo */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Coloca a imagem de fundo atrás de todos os outros elementos */
+`;
