@@ -4,7 +4,7 @@ import Quiz from "./quiz-page";
 function QuizRoutes(){
     return(
         <BrowserRouter>
-            <Route element={<Quiz/>} path="/" />
+            <Route element={<Quiz/>} path="/quiz" />
         </BrowserRouter>
     )
 }
