@@ -31,6 +31,7 @@ export const StartButton = styled.button`
   color: white;
   margin: 0 auto;
   box-shadow: #0000008f 5px 5px 10px;
+  cursor: pointer;
 `;
 
 export const Image = styled.img`
