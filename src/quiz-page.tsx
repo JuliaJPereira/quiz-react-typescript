@@ -1,13 +1,16 @@
 import { Container, Box, Title, Text, StartButton, Image, BackgroundImage } from "./quiz-style.ts";
 
 function Quiz() {
+
+  const handleClick = () => {};
+  
   return (
     <Container>
       <BackgroundImage src="src/assets/background.png" alt="fundo" />
       <Title id="title">Quiz de Programação</Title>
       <Box id="texto-e-botao">
         <Text id="text">Clique no botão abaixo para começar!</Text>
-        <StartButton id="iniciar">Iniciar</StartButton>
+        <StartButton id="iniciar" onClick={handleClick}>Iniciar</StartButton>
       </Box>
       <Image
         src="src/assets/computer.png"
