@@ -32,6 +32,12 @@ export const StartButton = styled.button`
   margin: 0 auto;
   box-shadow: #0000008f 5px 5px 10px;
   cursor: pointer;
+  border: none;
+  transition: background-color 1s;
+
+  &:hover {
+    background-color: #902EF2;
+  }
 `;
 
 export const Image = styled.img`
