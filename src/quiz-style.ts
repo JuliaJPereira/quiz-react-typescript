@@ -56,3 +56,5 @@ export const BackgroundImage = styled.img`
   height: 100%;
   z-index: -1; /* Coloca a imagem de fundo atrás de todos os outros elementos */
 `;
+
+export const BackIcon = styled.img``;

@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { Container, Box, Title, Text, Image, BackgroundImage, TechnologiesButton } from "./quiz-style.ts";
+import { Container, Box, Title, Text, Image, BackgroundImage, TechnologiesButton, BackIcon } from "./quiz-style.ts";
 
 function SelectQuiz() {
 
@@ -16,10 +16,16 @@ function SelectQuiz() {
   const handleClickJS = () => {
     navigate("/quiz-javascript");
   };
+
+  const handleGoBack = () => {
+    // navigate(".."); // Voltar uma página na hierarquia de rotas
+    navigate(-1); // Voltar à página anterior na pilha de navegação
+  };
   
   return (
     <Container>
       <BackgroundImage src="src/assets/background.png" alt="fundo" />
+      <BackIcon src="src/assets/ic-back.svg" alt="voltar" onClick={handleGoBack} />
       <Title id="title">Quiz de programação</Title>
       <Box id="texto-e-botao">
         <Text id="text">Escolha uma categoria</Text>
