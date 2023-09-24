@@ -1,8 +1,12 @@
+import { useNavigate } from "react-router-dom";
 import { Container, Box, Title, Text, StartButton, Image, BackgroundImage } from "./quiz-style.ts";
 
 function Quiz() {
 
-  const handleClick = () => {};
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/selecione-quiz");
+  };
   
   return (
     <Container>

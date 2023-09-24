@@ -1,10 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import Quiz from './quiz-page.tsx'
 import './index.css'
+import QuizRoutes from './quiz-routes.tsx'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <Quiz />
+    <QuizRoutes />
   </React.StrictMode>,
 )
