@@ -1,3 +1,4 @@
+import { QuizHTML } from "./quiz-html";
 import Quiz from "./quiz-page";
 import SelectQuiz from "./quiz-select-page";
 import {
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
   {
     path: "/selecione-quiz",
     element: <SelectQuiz />,
+  },
+  {
+    path: "/quiz-HTML",
+    element: <QuizHTML />,
   },
 ]);
 
