@@ -40,6 +40,10 @@ export const StartButton = styled.button`
   }
 `;
 
+export const TechnologiesButton = styled(StartButton)`
+  margin-right: 15px
+`;
+
 export const Image = styled.img`
   width: 500px;
 `;
