@@ -27,7 +27,7 @@ export const Text = styled.p`
 `;
 
 export const StartButton = styled.button`
-  background-color: #C767AC;
+  background-color: #c767ac;
   color: white;
   margin: 0 auto;
   box-shadow: #0000008f 5px 5px 10px;
@@ -36,16 +36,16 @@ export const StartButton = styled.button`
   transition: background-color 1s;
 
   &:hover {
-    background-color: #902EF2;
+    background-color: #902ef2;
   }
 `;
 
 export const TechnologiesButton = styled(StartButton)`
-  margin-right: 15px
+  margin-right: 15px;
 `;
 
 export const Image = styled.img`
-  width: 500px;
+  width: 100%;
 `;
 
 export const BackgroundImage = styled.img`
@@ -57,4 +57,39 @@ export const BackgroundImage = styled.img`
   z-index: -1; /* Coloca a imagem de fundo atrás de todos os outros elementos */
 `;
 
-export const BackIcon = styled.img``;
+export const BackIcon = styled.img`
+  margin-left: -60px;
+  @media (max-width: 430px) {
+    margin-left: 60px;
+  }
+`;
+
+/* QUESTIONS STYLE */
+
+export const BoxQuestions = styled(Box)`
+  background-color: #550cf2;
+  border-radius: 16px;
+  width: 60%;
+  margin: 0 auto;
+`;
+
+export const QuestionStyle = styled.span`
+  color: white;
+`;
+
+export const BoxOptions = styled.div`
+  display: contents;
+`;
+
+export const OptionStyle = styled.button`
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 5px 20px;
+  margin-top: 15px;
+  background-color: transparent;
+
+  :hover {
+    background-color: #CA6BA6;
+  }
+`;
