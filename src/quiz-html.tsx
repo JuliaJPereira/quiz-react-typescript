@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 import {
   Container,
   Box,
@@ -13,25 +12,51 @@ import {
   NextButton,
 } from "./quiz-style.ts";
 import { IQuestion } from "./types";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export function QuizHTML() {
+  
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+  
+  const navigate = useNavigate();
+
+  const handleNextQuestion = () => {
+    setCurrentQuestion((prevQuestion) => prevQuestion + 1);
+  };
+
+  const handleFinish = () => {
+    alert('Quiz finalizado!');
+    navigate("/selecione-quiz");
+  }
+
+  const showButtons = currentQuestion < quizQuestion.length - 1 ? (
+    <NextButton onClick={handleNextQuestion}>Próximo</NextButton>
+  ) : <NextButton onClick={handleFinish}>Finalizar Quiz</NextButton>;
+  
   return (
     <Container>
       <BackgroundImage src="src/assets/background.png" alt="fundo" />
       <Title id="title">Quiz de programação</Title>
       <Box id="texto-e-botao">
-        <Text id="text">Pergunta 1 de 5</Text>
+        <Text id="text">Pergunta {currentQuestion+1} de {quizQuestion.length}</Text>
       </Box>
       <BoxQuestions>
-        <QuestionStyle>Pergunta1</QuestionStyle>
-        <BoxOptions>
-          <OptionStyle>Opção1</OptionStyle>
-          <OptionStyle>Opção2</OptionStyle>
-          <OptionStyle>Opção3</OptionStyle>
-          <OptionStyle>Opção4</OptionStyle>
-        </BoxOptions>
+        {quizQuestion.map(
+          (question, index) =>
+            index === currentQuestion && (
+              <React.Fragment key={index}>
+                <QuestionStyle>{question.question}</QuestionStyle>
+                <BoxOptions>
+                  {question.options.map((option, optionIndex) => (
+                    <OptionStyle key={optionIndex}>{option}</OptionStyle>
+                  ))}
+                </BoxOptions>
+              </React.Fragment>
+            )
+        )}
       </BoxQuestions>
-      <NextButton>Próximo</NextButton>
+      {showButtons}
       <Image src="src/assets/computer.png" alt="Imagem computador" />
     </Container>
   );
@@ -39,56 +64,41 @@ export function QuizHTML() {
 
 const quizQuestion: IQuestion[] = [
   {
-    question: 'O que significa HTML?',
+    question: "O que significa HTML?",
     options: [
-      'HyperText Markup Language',
-      'High-level Text Management Language',
-      'Hyperlink and Text Management Language',
-      'HyperTransfer Markup Language',
+      "HyperText Markup Language",
+      "High-level Text Management Language",
+      "Hyperlink and Text Management Language",
+      "HyperTransfer Markup Language",
     ],
     correct: 0,
   },
   {
-    question: 'Qual tag é usada para criar um link em HTML?',
-    options: [
-      '<link>',
-      '<a>',
-      '<href>',
-      '<url>',
-    ],
+    question: "Qual tag é usada para criar um link em HTML?",
+    options: ["<link>", "<a>", "<href>", "<url>"],
     correct: 1,
   },
   {
-    question: 'Como é chamada a estrutura básica de uma página HTML?',
-    options: [
-      '<web>',
-      '<structure>',
-      '<html>',
-      '<body>'
-    ],
+    question: "Como é chamada a estrutura básica de uma página HTML?",
+    options: ["<web>", "<structure>", "<html>", "<body>"],
     correct: 2,
   },
   {
-    question: 'Qual tag é usada para criar uma lista numerada em HTML?',
-    options: [
-      '<ol>',
-      '<ul>',
-      '<li>',
-      '<dl>'
-    ],
+    question: "Qual tag é usada para criar uma lista numerada em HTML?",
+    options: ["<ol>", "<ul>", "<li>", "<dl>"],
     correct: 0,
   },
   {
-    question: 'Como adicionar um comentário em HTML?',
+    question: "Como adicionar um comentário em HTML?",
     options: [
-      '<!-- Comentário -->',
-      '// Comentário',
-      '/* Comentário */',
-      '# Comentário'
+      "<!-- Comentário -->",
+      "// Comentário",
+      "/* Comentário */",
+      "# Comentário",
     ],
     correct: 0,
-  }
-]
+  },
+];
 
 // Respostas:
 // Resposta: a) HyperText Markup Language

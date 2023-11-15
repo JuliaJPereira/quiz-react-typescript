@@ -75,6 +75,8 @@ export const BoxQuestions = styled(Box)`
 
 export const QuestionStyle = styled.span`
   color: white;
+  font-weight: 500;
+  letter-spacing: 1px;
 `;
 
 export const BoxOptions = styled.div`
@@ -86,8 +88,11 @@ export const OptionStyle = styled.button`
   border: 1px solid white;
   border-radius: 5px;
   padding: 5px 20px;
-  margin-top: 15px;
+  margin-top: 25px;
   background-color: transparent;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  width: 250px;
 
   &:hover {
     background-color: #2A08A6;
@@ -101,7 +106,8 @@ export const NextButton = styled.button`
   width: 75%;
   margin: 0 auto;
   display: block;
-  margin-top: 15px;
+  margin-top: 25px;
+  letter-spacing: 2px;
 
   &:hover {
     background-color: #E67C79;
