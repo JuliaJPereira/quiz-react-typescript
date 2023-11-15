@@ -25,7 +25,7 @@ function SelectQuiz() {
   return (
     <Container>
       <BackgroundImage src="src/assets/background.png" alt="fundo" />
-      <BackIcon src="src/assets/ic-back.svg" alt="voltar" onClick={handleGoBack} />
+      <BackIcon src="src/assets/ic-back.svg" alt="voltar" onClick={handleGoBack} id='btn-voltar' />
       <Title id="title">Quiz de programação</Title>
       <Box id="texto-e-botao">
         <Text id="text">Escolha uma categoria</Text>
