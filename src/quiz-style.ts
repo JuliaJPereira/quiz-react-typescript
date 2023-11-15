@@ -89,7 +89,21 @@ export const OptionStyle = styled.button`
   margin-top: 15px;
   background-color: transparent;
 
-  :hover {
-    background-color: #CA6BA6;
+  &:hover {
+    background-color: #2A08A6;
+    border: none;
+  }
+`;
+
+export const NextButton = styled.button`
+  background-color: #CE739B;
+  color: white;
+  width: 75%;
+  margin: 0 auto;
+  display: block;
+  margin-top: 15px;
+
+  &:hover {
+    background-color: #E67C79;
   }
 `;

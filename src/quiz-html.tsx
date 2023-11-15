@@ -10,6 +10,7 @@ import {
   QuestionStyle,
   BoxOptions,
   OptionStyle,
+  NextButton,
 } from "./quiz-style.ts";
 import { IQuestion } from "./types";
 
@@ -30,6 +31,7 @@ export function QuizHTML() {
           <OptionStyle>Opção4</OptionStyle>
         </BoxOptions>
       </BoxQuestions>
+      <NextButton>Próximo</NextButton>
       <Image src="src/assets/computer.png" alt="Imagem computador" />
     </Container>
   );
