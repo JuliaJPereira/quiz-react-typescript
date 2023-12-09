@@ -1,3 +1,4 @@
+import Swal from "sweetalert2";
 import {
   Container,
   Box,
@@ -26,8 +27,14 @@ export function QuizHTML() {
   };
 
   const handleFinish = () => {
-    alert('Quiz finalizado!');
-    navigate("/selecione-quiz");
+    Swal.fire({
+      position: "center",
+      icon: "success",
+      title: "Quiz HTML Finalizado!",
+      showConfirmButton: false,
+      timer: 1500
+    });
+    navigate("/fim-quiz");
   }
 
   const showButtons = currentQuestion < quizQuestion.length - 1 ? (
