@@ -1,3 +1,4 @@
+import { QuizFinished } from "./quiz-finished";
 import { QuizHTML } from "./quiz-html";
 import Quiz from "./quiz-page";
 import SelectQuiz from "./quiz-select-page";
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
     path: "/quiz-HTML",
     element: <QuizHTML />,
   },
+  {
+    path: "/fim-quiz",
+    element: <QuizFinished />
+  }
 ]);
 
 function QuizRoutes() {
