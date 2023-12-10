@@ -17,9 +17,8 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export function QuizHTML() {
-  
   const [currentQuestion, setCurrentQuestion] = useState(0);
-  
+
   const navigate = useNavigate();
 
   const handleNextQuestion = () => {
@@ -32,21 +31,26 @@ export function QuizHTML() {
       icon: "success",
       title: "Quiz HTML Finalizado!",
       showConfirmButton: false,
-      timer: 1500
+      timer: 1500,
     });
     navigate("/fim-quiz");
-  }
+  };
 
-  const showButtons = currentQuestion < quizQuestion.length - 1 ? (
-    <NextButton onClick={handleNextQuestion}>Próximo</NextButton>
-  ) : <NextButton onClick={handleFinish}>Finalizar Quiz</NextButton>;
-  
+  const showButtons =
+    currentQuestion < quizQuestion.length - 1 ? (
+      <NextButton onClick={handleNextQuestion}>Próximo</NextButton>
+    ) : (
+      <NextButton onClick={handleFinish}>Finalizar Quiz</NextButton>
+    );
+
   return (
     <Container>
       <BackgroundImage src="src/assets/background.png" alt="fundo" />
       <Title id="title">Quiz de programação</Title>
       <Box id="texto-e-botao">
-        <Text id="text">Pergunta {currentQuestion+1} de {quizQuestion.length}</Text>
+        <Text id="text">
+          Pergunta {currentQuestion + 1} de {quizQuestion.length}
+        </Text>
       </Box>
       <BoxQuestions>
         {quizQuestion.map(
